@@ -1,4 +1,4 @@
-# TO DO LIST API  
+# TO-DO-LIST-API  
 ![Badge em Desenvolvimento](https://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
 ##   
 
@@ -6,7 +6,7 @@
 
 
 
-## Commands for installing To Do List API:
+## Commands for installing TO-DO-LIST-API:
 
 you need to have NODE installed:
 ```
