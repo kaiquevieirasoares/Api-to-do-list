@@ -1,8 +1,8 @@
 from django.contrib import admin
-from django.urls import include, path
+from django.urls import  path
 
-from . import views
-
+from .views import (ListTasksView, CreateTaskView)
 urlpatterns = [
-    path('', views.get_task, name='get_all_tasks')
+    path('tasks/', ListTasksView.as_view(), name='get-all-tasks'),
+    path('tasks/create/', CreateTaskView.as_view(), name='create'),
 ]

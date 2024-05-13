@@ -1,28 +1,22 @@
-from django.shortcuts import render
-
-from django.shortcuts import render
-from django.http import HttpResponse, JsonResponse
-
-from rest_framework.decorators import api_view
-from rest_framework.response import Response
-from rest_framework import status
+from rest_framework.generics import ( 
+    ListAPIView,
+    RetrieveAPIView, 
+    CreateAPIView,
+    DestroyAPIView, 
+    UpdateAPIView
+    
+    )
 
 from .models import Task
-from .serializers import TaskSerializer
+from .serializers import (TaskSerializer )
 
-import json
+class ListTasksView(ListAPIView):
+    queryset = Task.objects.all()
+    serializer_class = TaskSerializer
 
-@api_view(['GET'])
-def get_task(request):
-    if request.method == 'GET':
-        tasks = Task.objects.all()
-        serializer = TaskSerializer(tasks, many = True)
-        return Response(serializer.data)
+
+class CreateTaskView(CreateAPIView):
+    queryset = Task.objects.all()
+    serializer_class = TaskSerializer
     
-    return Response(status=status.HTTP_400_BAD_REQUEST)
-
-
-# @api_view(['GET'])
-# def get_task_filter(request):
-
 
