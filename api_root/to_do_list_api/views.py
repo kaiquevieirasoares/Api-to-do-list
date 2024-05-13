@@ -7,13 +7,26 @@ from rest_framework.generics import (
     
     )
 
+from django_filters.rest_framework import DjangoFilterBackend
+from rest_framework import filters
+
 from .models import Task
 from .serializers import (TaskSerializer )
+
+
 
 # Get
 class ListTasksView(ListAPIView):
     queryset = Task.objects.all()
     serializer_class = TaskSerializer
+
+#Search 
+class SearchTaskView(ListAPIView):
+    queryset = Task.objects.all()
+    serializer_class = TaskSerializer
+    filter_backends = [filters.SearchFilter]
+    search_fields = ['titulo', 'descricao']
+
 
 # Post
 class CreateTaskView(CreateAPIView):
