@@ -94,48 +94,52 @@ Primeiramente vamos entender o que significa os termos técnicos da aplicação.
     - Obs: O numero da paginação pode ser alterada em Settings.py
     
     - ```http://127.0.0.1:8000/api/v1/tasks/```
-    - ![image](https://github.com/kaiquevieirasoares/api-to-do-list/assets/123115955/d8ff6e12-c76b-4e58-981a-40a8a9e385ba)
+      ![image](https://github.com/kaiquevieirasoares/api-to-do-list/assets/123115955/d8ff6e12-c76b-4e58-981a-40a8a9e385ba)
 
   ### GET By ID - Retorna uma tarefa (Task) especifica a partir do id.
     - ```http://127.0.0.1:8000/api/v1/tasks/get/55```
-    - ![image](readme-images/get-by-id.png)
+      ![image](readme-images/get-by-id.png)
  
       
   ### CREATE - POST - Cria uma tarefa uma tarefa (Task).
      - Observe que o status está como 400, isso ocorre porque chamamos o END-POINT sem passar as informações obrigatórias.
     - ```http://127.0.0.1:8000/api/v1/tasks/create/```
-    - ![image](readme-images/post.png)
+      ![image](readme-images/post.png)
  
   ### UPDATE - PATCH and PUT- Atualiza uma tarefa já existente.
      - Usando o PUT, é necessário que todas as informações sejam atualizadas.
      - Observe que o status está como 400, isso ocorre porque chamamos o END-POINT sem passar todas as informações obrigatórias.
     - ```http://127.0.0.1:8000/api/v1/tasks/update/55```
-    - ![image](readme-images/put-patch.png)
+      ![image](readme-images/put-patch.png)
       
     - ##### Agora obeserve o mesmo END-POINT como uma requisição do tipo PATCH.
       
-    - ![image](readme-images/patch-exemplo.png)
+      ![image](readme-images/patch-exemplo.png)
  
 
   ### DELETE - Deleta do Banco de Dados uma tarefa (task) especifica a partir do ID.
     - Observe que o código foi 204, ele indica que a solicitação foi bem sucedida e o cliente não precisa sair da página atual.
     - ```http://127.0.0.1:8000/api/v1/tasks/delete/55```
-    - ![image](readme-images/delete.png)
+      ![image](readme-images/delete.png)
     
 
   ### SEARCH - Esse END-POINT realiza uma pesquisa por tarefas semelhantes no titulo e descrição.
     - Observe que esse END-POINT pode ser chamado de duas formas:
     - Nesse caso não especificamos a pesquisa, logo, todas as tarefas serão requisitadas.
     - ```(http://127.0.0.1:8000/api/v1/tasks/search/)```
-    - ![image](readme-images/search-sem-parametro.png)
+      ![image](readme-images/search-sem-parametro.png)
     - Na seguna imagem, especificamos a palavra de pesquisa, será requisitada apenas as tarefas semelhantes.
     - ```(http://127.0.0.1:8000/api/v1/tasks/search/?search=carro)```
-    - ![image](readme-images/search-com-parametro.png)
-    
+      
 
-    
-  
+### Status http durante as requisições:
+![image](readme-images/http-code.png)
 
+
+
+### Faça bom proveito dessa aplicação, ela foi construída de uma forma em que seja fácil reutiliza-la em outros projetos, ou até mesmo implementar novas funcionalidades, sinta-se livre.
+
+I love programming ❤️
 
 
 
