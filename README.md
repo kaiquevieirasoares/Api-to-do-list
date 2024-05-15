@@ -19,7 +19,7 @@ Essa API ajuda no gerenciamento de uma lista de tarefas (to-do list). A API perm
 - ### Como Funciona uma API RESTFUL ?
   Uma API RESTful funciona através da manipulação de recursos e representações. Essas representações são trocadas entre os usuários e o servidor através de uma interface padronizada e de um protocolo de comunicação específico — geralmente o HTTP. Assim, quando um usuário deseja usar uma funcionalidade da aplicação, seu dispositivo envia uma solicitação via HTTP ao servidor. O servidor localiza o recurso e comunica a representação do estado dele na resposta ao usuário através do mesmo protocolo. E são essas representações que podem ser feitas em diversos formatos.
 
-  Caso ainda tenha duvidas de como uma API RESTFUL funciona, recomendo a leitura do site: ![api-restful-hostiger](https://www.hostinger.com.br/tutoriais/api-restful)
+  Caso ainda tenha duvidas de como uma API RESTFUL funciona, recomendo a leitura do site: (https://www.hostinger.com.br/tutoriais/api-restful)
 
 ### Como Instalar a API.
 - #### Clone esse Reposítorio em sua maquina, isso pode ser feito via git com o commando:
