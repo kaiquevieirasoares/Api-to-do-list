@@ -32,18 +32,52 @@ Essa API ajuda no gerenciamento de uma lista de tarefas (to-do list). A API perm
   ![Captura de tela 2024-05-15 150552](https://github.com/kaiquevieirasoares/api-to-do-list/assets/123115955/25e31f9f-6e82-4691-b8ea-daef2f1e7c39)
 
 - ### Com o projeto em mãos você terá acesso a essa estrutura de codigo:
-  ![Diretorio do projeto](api-to-do-list/readme-images/Configuração do diretório.png)
+  - Observe que a pasta venv não estara em seu projeto, logo sera necessário cria-la para instalar os requerimentos.
+  ![Diretorio do projeto](readme-images/configuração-do-diretório.png)
+
+- ### Dentro do Diretório Principal (api-to-do-list), no terminal, execute o seguinte comando para criar a maquina virtual:
+  ``` python3 -m venv venv ``` no Linux ou ``` python -m venv venv ``` para Windows.
+
+- ### Agora vamos instalar os requerimentos para startar a API.
+  Utilize o sequinte comando para instalar os requerimentos.
+  - Lembre de instalar as dependencias com a maquina virtual ativa.
+  - ```./pip install -r requirements.txt ```
   
-  
 
 
 
-| Tecnologia | Versão | Comando para instalar |
-|:----------|------|---------------------|
-|NodeJS| 12.18.2| ``` brew install node ``` |
-|Yarn  |  1.17.3 | ```npm install -g yarn``` |
-|Expo  |  3.23.1 |  ```yarn add global expo-cli```|
+| Bibliotecas | Versão | 
+|:----------|------|
+|asgiref | 3.8.1|
+|Django  | 5.0.6 | 
+|django-cors-headers |  4.3.1| 
+|django-filter |  24.2| 
+|djangorestframework== | 3.15.1|  
+|sqlparse |  0.5.0|  
+|tzdata |  2024.1|  
 
+## Startando a API
+Com Todos os passsoas anteriores concluídos. Vamos Inicar o projeto.
+
+### Criando um Super Usuário. 
+-  é necessário criar um Super Usuário para que o servidor Django possa ser iniciado, crie utilizando o exemplo a seguir.
+   ```python3 manage.py createsuperuser``` no Linux e python ``` python manage.py createsuperuser```
+   
+   ![Diretorio do projeto](readme-images/cmd-create-super-user.png)
+   
+### Povoando o Banco de Dados. 
+-  Vamos Povoar o Banco de Dados Utilizando o comando utilizando o Django Commands.
+   ```python3 manage.py db_population``` no Linux e python ```python manage.py db_population```
+   
+   ![Diretorio do projeto](readme-images/bd-povoamento.png)
+   
+### Pronto! Agora já podemos iniciar o server. Utilize o comando a seguir:
+
+```python3 manage.py db_population``` para Linux or ```python manage.py db_population``` para windows.
+
+![image](https://github.com/kaiquevieirasoares/api-to-do-list/assets/123115955/6e0b5150-d740-4451-965a-c0482db2a093)
+
+Vamos lá ❤️
 
 
 
@@ -54,7 +88,52 @@ Primeiramente vamos entender o que significa os termos técnicos da aplicação.
   O URL do endpoint é a localização exata do recurso solicitado ao servidor de API, permitindo que dois programas interajam. No endpoint, a API acessará os recursos necessários de um servidor para executar uma tarefa especificada, como recuperar determinados dados ou informações. As APIs enviam solicitações para acessar dados de um servidor com uma resposta enviada de volta. O local da resposta é o endpoint.
   
   - Nossa API possui 5  END_POINTS, ou seja, 5 endereços com diferentes funções de requisição, sendo elas:
-  
+  ### Obs:```http://127.0.0.1:8000``` é a parte estatica da aplicação, pode ser alterada para diferentes sistemas.
+
+   ### GET ALL - Retorna todas as tarefas(Tasks) com paginação de 5.
+    - Obs: O numero da paginação pode ser alterada em Settings.py
+    
+    - ```http://127.0.0.1:8000/api/v1/tasks/```
+    - ![image](https://github.com/kaiquevieirasoares/api-to-do-list/assets/123115955/d8ff6e12-c76b-4e58-981a-40a8a9e385ba)
+
+  ### GET By ID - Retorna uma tarefa (Task) especifica a partir do id.
+    - ```http://127.0.0.1:8000/api/v1/tasks/get/55```
+    - ![image](readme-images/get-by-id.png)
+ 
+      
+  ### CREATE - POST - Cria uma tarefa uma tarefa (Task).
+     - Observe que o status está como 400, isso ocorre porque chamamos o END-POINT sem passar as informações obrigatórias.
+    - ```http://127.0.0.1:8000/api/v1/tasks/create/```
+    - ![image](readme-images/post.png)
+ 
+  ### UPDATE - PATCH and PUT- Atualiza uma tarefa já existente.
+     - Usando o PUT, é necessário que todas as informações sejam atualizadas.
+     - Observe que o status está como 400, isso ocorre porque chamamos o END-POINT sem passar todas as informações obrigatórias.
+    - ```http://127.0.0.1:8000/api/v1/tasks/update/55```
+    - ![image](readme-images/put-patch.png)
+      
+    - ##### Agora obeserve o mesmo END-POINT como uma requisição do tipo PATCH.
+      
+    - ![image](readme-images/patch-exemplo.png)
+ 
+
+  ### DELETE - Deleta do Banco de Dados uma tarefa (task) especifica a partir do ID.
+    - Observe que o código foi 204, ele indica que a solicitação foi bem sucedida e o cliente não precisa sair da página atual.
+    - ```http://127.0.0.1:8000/api/v1/tasks/delete/55```
+    - ![image](readme-images/delete.png)
+    
+
+  ### SEARCH - Esse END-POINT realiza uma pesquisa por tarefas semelhantes no titulo e descrição.
+    - Observe que esse END-POINT pode ser chamado de duas formas:
+    - Nesse caso não especificamos a pesquisa, logo, todas as tarefas serão requisitadas.
+    - ```(http://127.0.0.1:8000/api/v1/tasks/search/)```
+    - ![image](readme-images/search-sem-parametro.png)
+    - Na seguna imagem, especificamos a palavra de pesquisa, será requisitada apenas as tarefas semelhantes.
+    - ```(http://127.0.0.1:8000/api/v1/tasks/search/?search=carro)```
+    - ![image](readme-images/search-com-parametro.png)
+    
+
+    
   
 
 
