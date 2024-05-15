@@ -1,0 +1,104 @@
+[{ "titulo": "Ir para academia",
+            "descricao": "De 4:00 am",
+            "prazo": "2024-05-13",
+            "conclusao": "2024-05-13",
+            "estado": 1
+        },
+        { "titulo": "Ir para o trabalho",
+            "descricao": "De 7:00 am",
+            "prazo": "2024-05-12",
+            "conclusao": "2024-05-12",
+            "estado": 2
+        },
+        { "titulo": "buscar filho na escola",
+            "descricao": "De 12;30 voltar para o trabalho",
+            "prazo": "2024-05-15",
+            "conclusao": "2024-05-15",
+            "estado": 4
+        },
+         { "titulo": "Comprar o presente da amada",
+            "descricao": "estou pensando em comprar algum buque de flores",
+            "prazo": "2024-05-15",
+            "conclusao": "2024-07-15",
+            "estado": 2
+        }
+        ,
+         { "titulo": "Viagem para o Rio de Janeiro",
+            "descricao": "estou pensando em viajar para o Rio de Janeiro Segunda Feira",
+            "prazo": "2024-08-15",
+            "conclusao": "2024-08-19",
+            "estado": 1
+        },
+         
+         { "titulo": "Festa da Familia",
+            "descricao": "Sabado vou para a festa da familia",
+            "prazo": "2024-09-10",
+            "conclusao": "2024-09-12",
+            "estado": 2
+        }
+        ,
+         
+         { "titulo": "Levar o celular no conserto",
+            "descricao": "estou pensando em viajar para o Rio de Janeiro Segunda Feira, vou aproveitar e levar meu celular para o conserto",
+            "prazo": "2025-08-15",
+            "conclusao": "2025-08-19",
+            "estado": 2
+        }
+        ,
+         
+         { "titulo": "Trabalho de Faculdade",
+            "descricao": "Trabalho do professor tarciano",
+            "prazo": "2025-08-12",
+            "conclusao": "2025-08-15",
+            "estado": 3
+        },
+
+        { "titulo": "Futebol com os amigos",
+            "descricao": "Futzinho com os amigos hehehehe",
+            "prazo": "2025-05-12",
+            "conclusao": "2025-05-15",
+            "estado": 4
+        },
+        { "titulo": "Colocar Memoria Ram no notebook",
+            "descricao": "Estou precisando colocar memoria ram no notebook, é importante!!",
+            "prazo": "2025-04-23",
+            "conclusao": "2025-04-25",
+            "estado": 1
+        },
+        { "titulo": "Ir na casa da minha irmão",
+            "descricao": "Faz tempo que não fui!!",
+            "prazo": "2025-01-25",
+            "conclusao": "2025-01-25",
+            "estado": 3
+        }
+        ,
+        { "titulo": "Tirar um tempo para ler Capitães",
+            "descricao": "",
+            "prazo": "2022-04-01",
+            "conclusao": "2022-04-01",
+            "estado": 3
+        }
+        ,
+        { "titulo": "Gerenciar o trabalho",
+            "descricao": "",
+            "prazo": "2022-08-12",
+            "conclusao": "2022-08-12",
+            "estado": 3
+        }
+        ,
+        { "titulo": "Pular de paraquedas",
+            "descricao": "",
+            "prazo": "2025-08-12",
+            "conclusao": "2025-08-15",
+            "estado": 3
+        }
+
+        ,
+        { "titulo": "Comprar um cavalo",
+            "descricao": "Comprar um cavalo para correr vaquejada",
+            "prazo": "2025-08-12",
+            "conclusao": "2025-08-15",
+            "estado": 1
+        }
+        
+        ]
