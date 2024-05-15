@@ -22,8 +22,10 @@ Essa API ajuda no gerenciamento de uma lista de tarefas (to-do list). A API perm
   Caso ainda tenha duvidas de como uma API RESTFUL funciona, recomendo a leitura do site: (https://www.hostinger.com.br/tutoriais/api-restful)
 
 ### Como Instalar a API.
-- #### Clone esse Reposítorio em sua maquina, isso pode ser feito via git com o commando:
-  ``` git clone "kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk"-  ```
+- #### Clone esse Reposítorio em sua maquina, isso pode ser feito via git com o comando:
+  ``` git clone https://github.com/kaiquevieirasoares/api-to-do-list.git```
+  ou diretamente do Github:
+  
 
 
 
